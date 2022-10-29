@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script  src="../js/user.js"></script>
+    <link rel="stylesheet" href="../../css/style-menu.css"/>
+    <link rel="stylesheet" href="../../css/style-cart.css" />
+    <link rel="stylesheet" href="../../css/style-box.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>NutriStead</title>
+</head>
+
+<body>
+
+
+<header>
+    <nav>
+      <div class="title">
+        <p>NutriStead</p>
+      </div>
+      <div class="header-1">
+        <i class="fas fa-user"></i>
+        <h2 id="demo"></h2>
+      </div>
+      <div class="toggle">
+        <i class="fa-solid fa-bars ouvrir"></i>
+        <i class="fas fa-times fermer"></i>
+      </div>
+      <ul class="menu">
+        <li><a href="../home.html">Home</a></li>
+        <li id="product"><a href="../products.html">Products</a>
+          <ul class="submenu1">
+            <li id="nutrition"><a href="#">Nutrition</a>
+              <ul class="submenu2">
+                <li><a href="whey.html">Whey</a></li>
+                <li><a href="isolate.html">Isolate Whey</a></li>
+                <li><a href="gainer.html">Gainer</a></li>
+                <li><a href="preworkout.html">Preworkout</a></li>
+              </ul>
+            </li>
+            <li><a href="snacks&drinks.html">Snacks and drinks</a></li>
+            <li><a href="vitamins.html">Vitamins</a></li>
+            <li><a href="../nutrition/clothing.html">Clothing</a></li>
+          </ul>
+        </li>
+        <div class="navbar">
+            <div class="cart" id="cart_logo">
+              <button type="button" id="cart-btn" onclick="cart_content()">
+                <li><i class="fas fa-shopping-cart"></i></li>
+                <span id="cart-count-info"></span>
+              </button>
+              <div class="cart-container">
+                <div class="cart-inside">
+                  <div class="cart-list"></div>
+                  <table class="table" id="table">
+                      <tr>
+                        <td>price</td>
+                        <td>image</td>
+                        <td>title</td>
+                      </tr>
+                  </table>
+                  <input class="delete_cart" type="button" div="delete_cart" value="clear the cart" onclick="clearcart()">
+                </div>
+              </div>
+            </div>
+        </div>
+        <li><button class="btn" onclick='window.location.href="../sign-in.html"'>Register<i
+              class="fas fa-long-arrow-alt-right " aria-hidden="true"></i></button></li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="container">
+        <div class="box" data-name="p-1">
+            <div class="Gold_img">
+                <img src="../../images/images-products/legging.png""
+                    alt="clothing" />
+            </div>
+            <div class="box_titre">
+                <h3>Vital Seamless 2.0 Leggins</h3>
+            </div>
+            <div class="box_price">From 40.00$</div>
+            <br />
+            <button class="quick_view">Quick view</button>
+        </div>
+        <div class="box" data-name="p-2">
+            <div class="Gold_img">
+                <img src="../../images/images-products/militaire.png"
+                    alt="clothing" />
+                <div class="box_titre">
+                    <h3>Men's Project Rock 100 Percent Tank</h3>
+                </div>
+                <div class="box_price">From 50.00$</div>
+                <br />
+                <button class="quick_view">Quick view</button>
+            </div>
+        </div>
+        <div class="box" data-name="p-3">
+            <div class="Gold_img">
+                <img src="../../images/images-products/shirt.png"
+                    alt="clothing" />
+            </div>
+            <div>
+                <h3>Women's UA Tech Twist V-Neck</h3>
+            </div>
+            <div class="box_price">From 30.00$</div>
+            <br />
+            <button class="quick_view">Quick view</button>
+        </div>
+    </div>
+    <div class="box_preview">
+        <div class="preview" data-target="p-1">
+            <i class="fas fa-times"></i>
+            <div class="image">
+                <img src="../../images/images-products/legging.png""
+                    alt="clothing" />
+                <div class="text">
+                    <h2>Vital Seamless 2.0 Leggins</h2>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i><span> (667)</span><br />
+                    <div class="taste">
+                        <label class="taste_title"> Size :</label>
+                        <select name="size" class="dropdown" id="size" onchange="getsize()" required>
+                            <option value="">S</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                        <div class="texte">
+                            This seamless sports bra is crafted using technical yarns and
+                            contouring textures. Designed with high stretch knit
+                            construction, movement is unrestrictive, allowing for an
+                            enhanced workout.
+                        </div>
+                        <div class="price">40.00$</div>
+                        <div class="stock">In stock</div>
+                        <input class="purshase" type="button" id="id_product"  onclick="addtocart(18)" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <div class="image">
+                <img src="../../images/images-products/militaire.png"
+                    alt="clothing" />
+                <div class="text">
+                    <h2>Men's Project Rock 100 Percent Tank</h2>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i><span> (667)</span><br />
+                    <div class="taste">
+                        <label class="taste_title">
+                            Select your Taste :</label>
+                        <select name="taste" class="dropdown" required>
+                            <option value="">S</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                        <div class="texte">
+                            The ultimate stringer vest to help you tackle any workout. With
+                            stylish detail throughout, this seamless vest will keep you
+                            cooler for longer during your sessions.
+                            <div class="price">50.00$</div>
+                            <div class="stock">In stock</div>
+                            <input class="purshase" type="button" value="Add to Cart" onclick="addtocart(19)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview" data-target="p-3">
+            <i class="fas fa-times"></i>
+            <div class="image">
+                <img src="../../images/images-products/shirt.png"
+                    alt="clothing" />
+                <div class="text">
+                    <h2>Women's UA Tech Twist V-Neck</h2>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i><span> (667)</span><br />
+                    <div class="taste">
+                        <label class="taste_title">
+                            Select your Taste :</label>
+                        <select name="taste" class="dropdown" required>
+                            <option value="">S</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                        <div class="texte">
+                            The New Original Contemporary T-Shirt is an update on our
+                            classic. We've kept comfort at the forefront with 100% cotton
+                            fabric, and introduced a stand-out logo feature to bring this
+                            wardrobe essential up a level.
+                        </div>
+                        <div class="price">30.00$</div>
+                        <div class="stock">In stock</div>
+                        <input class="purshase" type="button" value="Add to Cart" onclick="addtocart(20)" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/menu.js"></script>
+    <script  src="../js/cart.js"></script>
+    <script type="text/javascript" src="../../js/snacks&drinks.js"></script>
+</body>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
+</html>

@@ -1,0 +1,49 @@
+section{
+    padding: 100px;
+    height: 50vh;
+    color: white;
+    text-align: center;
+}
+
+article{
+    font-size: 1.5rem;
+    margin-top: 50px;
+    padding: 10px;
+    flex-direction: column;
+    background-color: black;
+
+}
+
+.texte{
+    border-radius: 20px;
+    text-align: left;
+}
+.about{
+    border-radius: 20px 20px 0 0;
+
+}
+#text{
+    padding: 35px 0;
+}
+.tableau{
+    margin: 35px 0;
+    width: 100%;
+    text-align: center;
+}
+.name{
+    font-size: 2rem;
+}
+
+.tableau th{
+    width: 50%;
+    border-bottom: 2px solid white;
+}
+.tableau td{
+    background-color: black;
+    height: 50px;
+}
+
+#remerciement{
+
+    border-radius: 0 0 20px 20px;
+}

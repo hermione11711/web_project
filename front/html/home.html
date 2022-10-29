@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script  src="../js/user.js"></script>
+  <link rel="stylesheet" href="../css/style-menu.css" />
+  <link rel="stylesheet" href="../css/style-carroussel.css" />
+  <link rel="stylesheet" href="../css/style-cart.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>NutriStead</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="title">
+        <p>NutriStead</p>
+      </div>
+      <div class="header-1">
+        <i class="fas fa-user"></i>
+        <h2 id="demo"></h2>
+      </div>
+      <div class="toggle">
+        <i class="fa-solid fa-bars ouvrir"></i>
+        <i class="fas fa-times fermer"></i>
+      </div>
+      <ul class="menu">
+        <li><a href="home.html">Home</a></li>
+        <li id="product"><a href="products.html">Products</a>
+          <ul class="submenu1">
+            <li id="nutrition"><a href="#">Nutrition</a>
+              <ul class="submenu2">
+                <li><a href="nutrition/whey.html">Whey</a></li>
+                <li><a href="nutrition/isolate.html">Isolate Whey</a></li>
+                <li><a href="nutrition/gainer.html">Gainer</a></li>
+                <li><a href="nutrition/preworkout.html">Preworkout</a></li>
+              </ul>
+            </li>
+            <li><a href="nutrition/snacks&drinks.html">Snacks and drinks</a></li>
+            <li><a href="nutrition/vitamins.html">Vitamins</a></li>
+            <li><a href="nutrition/clothing.html">Clothing</a></li>
+          </ul>
+        </li>
+        <div class="navbar">
+          <div class="cart" id="cart_logo">
+            <button type="button" id="cart-btn" >
+              <li><i class="fas fa-shopping-cart"></i></li>
+              <span id="cart-count-info"></span>
+            </button>
+            <div class="cart-container">
+              <div class="cart-inside">
+                <div class="cart-list"></div>
+                <table class="table" id="table">
+                  <tr>
+                    <td>price</td>
+                    <td>image</td>
+                    <td>title</td>
+                  </tr>
+                </table>
+                <input class="delete_cart" type="button" div="delete_cart" value="clear the cart"
+                  onclick="clearcart()">
+              </div>
+            </div>
+          </div>
+        </div>
+        <li><button class="btn" onclick='window.location.href="sign-in.html"'>Register<i
+              class="fas fa-long-arrow-alt-right " aria-hidden="true"></i></button></li>
+              <br></br>
+              <li><button class="btn" onclick='window.location.href="login.html"'>Login<i
+                class="fas fa-long-arrow-alt-right " aria-hidden="true"></i></button></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <section class="hero">
+    <article class="slider">
+      <div class="element">
+        <img src="../images/images-carrousel/whey.png" alt="img1" class="image_slider active">
+        <div>
+          <h2 class="caption active2"><a href="nutrition/whey.html">Whey</a></h2>
+        </div>
+      </div>
+      <div class="element">
+        <img src="../images/images-carrousel/isolate.png" alt="img1" class="image_slider">
+        <div>
+          <h2 class="caption"><a href="nutrition/isolate.html">Isolate whey</a></h2>
+        </div>
+      </div>
+      <div class="element">
+        <img src="../images/images-carrousel/gainer.png" alt="img1" class="image_slider">
+        <div>
+          <h2 class="caption"><a href="nutrition/gainer.html">Gainer</a></h2>
+        </div>
+      </div>
+      <div class="element">
+        <img src="../images/images-carrousel/preworkout.png" alt="img1" class="image_slider">
+        <div>
+          <h2 class="caption"><a href="nutrition/preworkout.html">Preworkout</a></h2>
+        </div>
+      </div>
+      <div class="element">
+        <img src="../images/images-carrousel/snack.png" alt="img1" class="image_slider">
+        <div>
+          <h2 class="caption"><a href="nutrition/snacks&drinks.html">Snacks & Drinks</a></h2>
+        </div>
+      </div>
+      <div class="element">
+        <img src="../images/images-carrousel/vitamin.png" alt="img1" class="image_slider">
+        <div>
+          <h2 class="caption"><a href="nutrition/vitamins.html">Vitamins</a></h2>
+        </div>
+      </div>
+      <div class="element">
+        <img src="../images/images-carrousel/clothing.png" alt="img1" class="image_slider">
+        <div>
+          <h2 class="caption"><a href="nutrition/clothing.html">Clothing</a></h2>
+        </div>
+      </div>
+      <div class="next"><i class="fa-solid fa-circle-chevron-right"></i></div>
+      <div class="previous"><i class="fa-solid fa-circle-chevron-left"></i></div>
+    </article>
+    <article class="citation">
+      <h1>"Never <br> Give<br>Up.<br>Trust<br> Yourself"</h1>
+      <p id="cartitem0"></p>
+      <p id="cartitem1"></p>
+      <p id="cartitem2"></p>
+
+    </article>
+  </section>
+
+
+  <footer>
+    <div class="bas"><a href="about-us.html">About us</a></div>
+  </footer>
+
+  <script type="text/javascript" src="../js/menu.js"></script>
+  <script  src="../js/cart.js"></script>
+  <script  src="../js/user.js"></script>
+  <script type="text/javascript" src="../js/carrousel.js"></script>
+</body>
+<script type="module" src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
+</html>

@@ -1,0 +1,275 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+}
+
+body{
+    background: url("../images/Cbum.png");
+}
+
+.container {
+    width: 100%;
+    height: 85vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    position: relative;
+    top: 200px;
+}
+
+.box {
+    position: center;
+    margin: 10px;
+    padding: 10px;
+    width: 350px;
+    text-align: center;
+
+
+    transition: box-shadow .3s;
+    width: 300px;
+    height: 500px;
+    margin: 50px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    float: left;
+}
+
+
+.box:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+
+@media screen and (max-width:700px) {
+    .box {
+        flex-direction: row;
+    }
+
+}
+
+img {
+    box-sizing: border-box;
+    width: 200px;
+    height: 295px;
+
+
+}
+
+.image img {
+    width: 280px;
+    height: auto;
+
+}
+
+.image {
+    display: grid;
+    grid-template-columns: 280px 400px;
+    align-items: start;
+    justify-content: space-evenly;
+}
+
+
+.Gold_price {
+    font-size: 1.2em;
+}
+
+
+.quick_view {
+    color: white;
+    opacity: 0;
+    background-color: black;
+    text-align: center;
+
+
+}
+
+
+.box:hover .quick_view {
+    background-color: "#008dd";
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: "#eeeee";
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    text-align: center;
+    width: 100%;
+    transition: all 1s;
+    opacity: 1;
+}
+
+#add_to_cart .quick_view {
+    opacity: 1;
+    color: black;
+    background-color: white;
+    border-color: white;
+
+}
+
+/*  centraliser +mettre en avant */
+.box_preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.box_price{
+    padding-top: 20px;
+}
+
+
+/* 1 par 1 */
+.box_preview .preview {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+
+    position: relative;
+    margin: 2rem;
+    width: 55rem;
+    background: #DCDCDC;
+
+}
+
+.box_preview .preview.active {
+    display: inline-block;
+
+}
+
+.box_preview .preview img {
+    height: 30rem;
+
+}
+
+.box_preview .preview .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 2rem;
+}
+
+.fa-shopping-cart {
+    font-size: 1.5rem;
+}
+
+.box_preview .preview .fa-times:hover {
+    transform: rotate(90deg);
+}
+
+.dropdown {
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: Biotif, "Noto Sans", "Noto Sans JP", "Noto Sans KR", Helvetica;
+    letter-spacing: .2px;
+    border: 0;
+    background-color: #f2f2f2;
+    padding: 8px;
+    min-height: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: 0 2px 1px 0 #ccc;
+}
+
+
+.taste_Title {
+    padding-bottom: 8px;
+    text-align: left;
+    font-size: 1.05em;
+    padding-top: 30px;
+
+}
+
+.taste_title {
+
+    padding-bottom: 8px;
+    text-align: left;
+    font-size: 1.05em;
+}
+
+.taste {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: black;
+}
+
+
+.stock {
+    text-align: left;
+    color: green;
+    font-size: 1em;
+    padding-top: 50px;
+
+
+}
+
+.texte {
+    padding-top: 15px;
+    text-align: justify;
+}
+
+.price {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 1.7em;
+}
+
+.purshase {
+    background: #008190;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #008190;
+    border-radius: 3px;
+    font-family: Biotif, "Noto Sans", "Noto Sans JP", "Noto Sans KR", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    color: #fff;
+    line-height: 1.5rem;
+    display: inline-flex;
+    text-decoration: none;
+    transition: background .2s;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0 2px 1px 0 #00262a;
+    white-space: nowrap;
+    width: auto;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.purshase:hover {
+    background: #0098aa;
+}
+
+@media screen and (max-width:1220px){
+    footer{
+        display: none;
+    }
+}
